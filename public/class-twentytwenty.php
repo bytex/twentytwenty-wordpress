@@ -293,7 +293,7 @@ class TwentyTwenty {
 		foreach ($images as $image) {
 			$images_code = $images_code . '<img src="' . $image->getAttribute("src") . '"/>';
 		}
-		return '<div id="twentytwenty">' . $images_code . '</div>';
+		return '<div id="twentytwenty" class="twentytwenty-container">' . $images_code . '</div>';
 	}
 
 }
