@@ -1,9 +1,8 @@
-=== TODO: Plugin Name ===
-Contributors: (this should be a list of wordpress.org userids)
-Donate link: http://example.com/
-Tags: comments, spam
+=== TwentyTwenty ===
+Contributors: cs123
+Tags: images, before-and-after, before and after, comparison, slider, zurb, twentytwenty, twenty twenty
 Requires at least: 3.5.1
-Tested up to: 3.6
+Tested up to: 3.8.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,122 +11,54 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+With TwentyTwenty, you can allow users to compare two images with a slider. This plugin brings TwentyTwenty to your blog, allowing you to present before-and-after images in your posts and pages.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+From our friends at Zurb, who developed TwentyTwenty:
 
-A few notes about the sections above:
+> We recently needed a way to showcase the visual differences between two images. Folks tend to typically place two images next to each other in hopes that it'll be clear exactly what changed. We even thought about having one image fade into another. But we knew there had to be an even better way to highlight the differences between two images. A way that would bring everything into focus.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+[Find out more about TwentyTwenty](http://zurb.com/playground/twentytwenty) on Zurb's site. 
 
 == Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
 
 = Using The WordPress Dashboard =
 
 1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'plugin-name'
+2. Search for 'twentytwenty'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
-= Uploading in WordPress Dashboard =
+== Instructions ==
 
-1. Navigate to the 'Add New' in the plugins dashboard
-2. Navigate to the 'Upload' area
-3. Select `plugin-name.zip` from your computer
-4. Click 'Install Now'
-5. Activate the plugin in the Plugin dashboard
+1. **Make sure your before and after images are the same size.** The before-and-after box will use the size of the first image, and assume that the second image is the same size.
 
-= Using FTP =
+2. Insert two images into a post.
 
-1. Download `plugin-name.zip`
-2. Extract the `plugin-name` directory to your computer
-3. Upload the `plugin-name` directory to the `/wp-content/plugins/` directory
-4. Activate the plugin in the Plugin dashboard
+3. Ensure the editor is in Text mode, not Visual mode, by clicking the Text tab.
 
+4. Go to code editor. Before the first image, type [twentytwenty]. After the second image, type [/twentytwenty]
 
-== Frequently Asked Questions ==
+Example:
 
-= A question that someone might have =
+`
+[twentytwenty]
+<a href="http://localhost:8888/wp-content/uploads/2014/03/5426317242_835693f9d2_b.jpg"><img src="http://localhost:8888/wp-content/uploads/2014/03/5426317242_835693f9d2_b.jpg" alt="5426317242_835693f9d2_b" width="500" height="400" class="alignnone size-medium wp-image-4" /></a>
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+<a href="http://localhost:8888/wp-content/uploads/2014/03/5787259771_c10650c8f4_b.jpg"><img src="http://localhost:8888/wp-content/uploads/2014/03/5787259771_c10650c8f4_b.jpg" alt="5787259771_c10650c8f4_b" width="500" height="400" class="alignnone size-medium wp-image-5" /></a>
+[/twentytwenty]
+`
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Before and after images in a post.
+2. Proper twentytwenty tags in WordPress's text editor.
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+* Initial version
 
 == Upgrade Notice ==
 
 = 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+* Initial version
