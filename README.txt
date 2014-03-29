@@ -24,7 +24,7 @@ This plugin brings the power of Zurb TwentyTwenty to your blog. From our friends
 = Using The WordPress Dashboard =
 
 1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'twentytwenty'
+2. Search for 'TwentyTwenty'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
@@ -34,9 +34,7 @@ This plugin brings the power of Zurb TwentyTwenty to your blog. From our friends
 
 2. Insert two images into a post.
 
-3. Ensure the editor is in Text mode, not Visual mode, by clicking the Text tab.
-
-4. Go to code editor. Before the first image, type [twentytwenty]. After the second image, type [/twentytwenty]
+4. Before the first image, type `[twentytwenty]`. After the second image, type `[/twentytwenty]`.
 
 Example:
 
@@ -50,8 +48,8 @@ Example:
 
 == Screenshots ==
 
-1. Before and after images in a post.
-2. Proper twentytwenty tags in WordPress's text editor.
+1. Before and after images in a post
+2. TwentyTwenty shortcodes in the WordPress editor
 
 == Changelog ==
 
