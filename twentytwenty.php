@@ -8,7 +8,7 @@
  * @author    Corey Martin <coreym@gmail.com>
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins
- * @copyright 2013 Corey Martin
+ * @copyright Plugin (c) Corey Martin, TwentyTwenty (c) ZURB
  *
  * @wordpress-plugin
  * Plugin Name:       TwentyTwenty
