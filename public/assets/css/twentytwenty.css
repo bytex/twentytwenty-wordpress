@@ -75,6 +75,7 @@
   margin-left: -6px; }
 
 .twentytwenty-container {
+  max-width: 100%;
   z-index: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
