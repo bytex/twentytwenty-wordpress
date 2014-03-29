@@ -11,9 +11,9 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-With TwentyTwenty, you can allow users to compare two images with a slider. This plugin brings TwentyTwenty to your blog, allowing you to present before-and-after images in your posts and pages.
+Show before-and-after images in your blog, with an interactive slider that allows users to compare them. 
 
-From our friends at Zurb, who developed TwentyTwenty:
+This plugin brings the power of Zurb TwentyTwenty to your blog. From our friends at Zurb:
 
 > We recently needed a way to showcase the visual differences between two images. Folks tend to typically place two images next to each other in hopes that it'll be clear exactly what changed. We even thought about having one image fade into another. But we knew there had to be an even better way to highlight the differences between two images. A way that would bring everything into focus.
 
