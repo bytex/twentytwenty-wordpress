@@ -16,7 +16,6 @@
  * If you're interested in introducing administrative or dashboard
  * functionality, then refer to `class-twentytwenty-admin.php`
  *
- * TODO: Rename this class to a proper name for your plugin.
  *
  * @package TwentyTwenty
  * @author  Corey Martin <coreym@gmail.com>
@@ -74,12 +73,6 @@ class TwentyTwenty {
 		// Load public-facing style sheet and JavaScript.
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-
-		/* Define custom functionality.
-		 * Refer To http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
-		 */
-		add_action( 'TODO', array( $this, 'action_method_name' ) );
-		add_filter( 'TODO', array( $this, 'filter_method_name' ) );
 
 		add_shortcode( 'twentytwenty', array( $this, 'twentytwenty_shortcode' ) );
 
@@ -231,24 +224,6 @@ class TwentyTwenty {
 	}
 
 	/**
-	 * Fired for each blog when the plugin is activated.
-	 *
-	 * @since    1.0.0
-	 */
-	private static function single_activate() {
-		// TODO: Define activation functionality here
-	}
-
-	/**
-	 * Fired for each blog when the plugin is deactivated.
-	 *
-	 * @since    1.0.0
-	 */
-	private static function single_deactivate() {
-		// TODO: Define deactivation functionality here
-	}
-
-	/**
 	 * Load the plugin text domain for translation.
 	 *
 	 * @since    1.0.0
@@ -290,10 +265,24 @@ class TwentyTwenty {
 		$doc->LoadHTML($content);
 		$images = $doc->getElementsByTagName('img');
 		$images_code = '';
+		$width = '';
+		$height = '';
 		foreach ($images as $image) {
+			if($width == '') {
+				$width = $image->getAttribute("width");
+			}
+			if($height == '') {
+				$height = $image->getAttribute("height");
+			}
 			$images_code = $images_code . '<img src="' . $image->getAttribute("src") . '"/>';
 		}
-		return '<div id="twentytwenty" class="twentytwenty-container">' . $images_code . '</div>';
+		if ($width != '') {
+			$width = $width . 'px';
+		}
+		if ($height != '') {
+			$height = $height . 'px';
+		}
+		return '<div id="twentytwenty" class="twentytwenty-container" style="width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
 	}
 
 }
