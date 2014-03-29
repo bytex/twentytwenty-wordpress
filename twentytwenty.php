@@ -39,9 +39,9 @@ register_deactivation_hook( __FILE__, array( 'TwentyTwenty', 'deactivate' ) );
 
 add_action( 'plugins_loaded', array( 'TwentyTwenty', 'get_instance' ) );
 
-if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+/*if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 
 	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-twentytwenty-admin.php' );
 	add_action( 'plugins_loaded', array( 'TwentyTwenty_Admin', 'get_instance' ) );
 
-}
+}*/
