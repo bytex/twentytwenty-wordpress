@@ -4,8 +4,10 @@
     var options = $.extend({default_offset_pct: 0.5, orientation: 'horizontal'}, options);
     return this.each(function() {
 
+
       var sliderPct = options.default_offset_pct;
       var container = $(this);
+      container.show();
       var sliderOrientation = options.orientation;
       var beforeDirection = (sliderOrientation === 'vertical') ? 'down' : 'left';
       var afterDirection = (sliderOrientation === 'vertical') ? 'up' : 'right';
@@ -20,6 +22,7 @@
       slider.append("<span class='twentytwenty-" + beforeDirection + "-arrow'></span>");
       slider.append("<span class='twentytwenty-" + afterDirection + "-arrow'></span>");
       container.addClass("twentytwenty-container");
+
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
       

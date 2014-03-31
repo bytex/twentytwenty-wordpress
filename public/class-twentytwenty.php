@@ -275,8 +275,6 @@ class TwentyTwenty {
 		wp_enqueue_script('twentytwenty-plugin-script');
 		wp_enqueue_style('twentytwenty-twentytwenty');
 
-
-
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/smart-dom-document.php' );
 		$doc = new SmartDOMDocument();
 		$doc->LoadHTML($content);
@@ -299,7 +297,7 @@ class TwentyTwenty {
 		if ($height != '') {
 			$height = $height . 'px';
 		}
-		return '<div class="twentytwenty" class="twentytwenty-container" style="max-width: 100%; width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
+		return '<div class="twentytwenty" class="twentytwenty-container" style="display: none; max-width: 100%; width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
 	}
 
 }

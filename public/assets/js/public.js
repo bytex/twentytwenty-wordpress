@@ -4,9 +4,7 @@
 	$(function () {
 
 		$(window).load(function() {
-  			$(".twentytwenty").each(function () {
-  				$(this).twentytwenty();
-  			});
+  			$(".twentytwenty").twentytwenty();
 		});
 
 	});
