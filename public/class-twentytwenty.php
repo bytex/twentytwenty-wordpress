@@ -243,7 +243,6 @@ class TwentyTwenty {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), self::VERSION );
 		wp_enqueue_style( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/css/twentytwenty.css', __FILE__ ), array(), self::VERSION );
 	}
 
@@ -282,7 +281,7 @@ class TwentyTwenty {
 		if ($height != '') {
 			$height = $height . 'px';
 		}
-		return '<div id="twentytwenty" class="twentytwenty-container" style="width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
+		return '<div class="twentytwenty" class="twentytwenty-container" style="width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
 	}
 
 }

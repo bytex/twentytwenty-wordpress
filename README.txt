@@ -15,9 +15,11 @@ This plugin brings the power of Zurb TwentyTwenty to your blog. From our friends
 
 > We recently needed a way to showcase the visual differences between two images. Folks tend to typically place two images next to each other in hopes that it'll be clear exactly what changed. We even thought about having one image fade into another. But we knew there had to be an even better way to highlight the differences between two images. A way that would bring everything into focus.
 
-[Find out more about TwentyTwenty, and see examples, ](http://zurb.com/playground/twentytwenty) on Zurb's site.
+Find out more about TwentyTwenty, and see examples, on the [official TwentyTwenty site from Zurb](http://zurb.com/playground/twentytwenty).
 
 With this plugin, you just two images to a post or page and surround them with a shortcode to  create a before-and-after image.
+
+[See a screencast of this plugin in action.](http://aspiringwebdev.com/twentytwenty)
 
 == Installation ==
 
@@ -34,22 +36,25 @@ With this plugin, you just two images to a post or page and surround them with a
 
 2. Insert two images into a post.
 
-4. Before the first image, type `[twentytwenty]`. After the second image, type `[/twentytwenty]`.
+3. Before the first image, type `[twentytwenty]`. After the second image, type `[/twentytwenty]`. See the second screenshot for an example.
 
-Example:
+[See a video of these steps.](http://aspiringwebdev.com/twentytwenty)
 
-`
-[twentytwenty]
-<a href="http://localhost:8888/wp-content/uploads/2014/03/5426317242_835693f9d2_b.jpg"><img src="http://localhost:8888/wp-content/uploads/2014/03/5426317242_835693f9d2_b.jpg" alt="5426317242_835693f9d2_b" width="500" height="400" class="alignnone size-medium wp-image-4" /></a>
+== Frequently Asked Questions ==
 
-<a href="http://localhost:8888/wp-content/uploads/2014/03/5787259771_c10650c8f4_b.jpg"><img src="http://localhost:8888/wp-content/uploads/2014/03/5787259771_c10650c8f4_b.jpg" alt="5787259771_c10650c8f4_b" width="500" height="400" class="alignnone size-medium wp-image-5" /></a>
-[/twentytwenty]
-`
+= Why aren't my images lining up properly? =
+Make sure that the images are the exact same height and width, and that you choose the same display size for the images when you upload them (ex. medium, large, full size).
+
+= What browsers does this support? =
+TwentyTwenty is tested on all modern browsers including Chrome, Firefox, Safari, and IE 9 and up.
+
+= Can I customize how the slider looks? =
+Not yet, but I hope to enable that in a future release?
 
 == Screenshots ==
 
-1. Before and after images in a post
-2. TwentyTwenty shortcodes in the WordPress editor
+1. Before and after images in a post. Images courtesy Abbie Rowe / National Archives.
+2. TwentyTwenty shortcodes in the WordPress editor. Images courtesy Abbie Rowe / National Archives.
 
 == Changelog ==
 
