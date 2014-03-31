@@ -243,7 +243,7 @@ class TwentyTwenty {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/css/twentytwenty.css', __FILE__ ), array(), self::VERSION );
+		wp_register_style( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/css/twentytwenty.css', __FILE__ ), array(), self::VERSION );
 	}
 
 	/**
@@ -252,13 +252,21 @@ class TwentyTwenty {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script('jquery');
-		wp_enqueue_script( $this->plugin_slug . '-jquery-event-move', plugins_url( 'assets/js/jquery.event.move.js', __FILE__ ), array( 'jquery' ), self::VERSION );
-		wp_enqueue_script( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/js/jquery.twentytwenty.js', __FILE__ ), array( 'jquery' ), self::VERSION );
-		wp_enqueue_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), self::VERSION );
+		
+		wp_register_script( $this->plugin_slug . '-jquery-event-move', plugins_url( 'assets/js/jquery.event.move.js', __FILE__ ), array( 'jquery' ), self::VERSION );
+		wp_register_script( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/js/jquery.twentytwenty.js', __FILE__ ), array( 'jquery' ), self::VERSION );
+		wp_register_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), self::VERSION );
 	}
 
 	public function twentytwenty_shortcode( $atts, $content = null ) {
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('twentytwenty-jquery-event-move');
+		wp_enqueue_script('twentytwenty-twentytwenty');
+		wp_enqueue_script('twentytwenty-plugin-script');
+		wp_enqueue_style('twentytwenty-twentytwenty');
+
+
+
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/smart-dom-document.php' );
 		$doc = new SmartDOMDocument();
 		$doc->LoadHTML($content);
