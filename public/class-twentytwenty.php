@@ -143,6 +143,8 @@ class TwentyTwenty {
 
 	}
 
+
+
 	/**
 	 * Fired when the plugin is deactivated.
 	 *
@@ -180,6 +182,14 @@ class TwentyTwenty {
 		}
 
 	}
+
+	private static function single_activate() {
+ 		// TODO: Define activation functionality here
+ 	}
+
+ 	private static function single_deactivate() {
+ 		// TODO: Define activation functionality here
+ 	}
 
 	/**
 	 * Fired when a new site is activated with a WPMU environment.
@@ -289,7 +299,7 @@ class TwentyTwenty {
 		if ($height != '') {
 			$height = $height . 'px';
 		}
-		return '<div class="twentytwenty" class="twentytwenty-container" style="width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
+		return '<div class="twentytwenty" class="twentytwenty-container" style="max-width: 100%; width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
 	}
 
 }
