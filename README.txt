@@ -15,7 +15,9 @@ This plugin brings the power of Zurb TwentyTwenty to your blog. From our friends
 
 > We recently needed a way to showcase the visual differences between two images. Folks tend to typically place two images next to each other in hopes that it'll be clear exactly what changed. We even thought about having one image fade into another. But we knew there had to be an even better way to highlight the differences between two images. A way that would bring everything into focus.
 
-[Find out more about TwentyTwenty](http://zurb.com/playground/twentytwenty) on Zurb's site. 
+[Find out more about TwentyTwenty, and see examples, ](http://zurb.com/playground/twentytwenty) on Zurb's site.
+
+With this plugin, you just two images to a post or page and surround them with a shortcode to  create a before-and-after image.
 
 == Installation ==
 
