@@ -46,10 +46,13 @@ With this plugin, you just two images to a post or page and surround them with a
 Make sure that the images are the exact same height and width, and that you choose the same display size for the images when you upload them (ex. medium, large, full size).
 
 = What browsers does this support? =
-TwentyTwenty is tested on all modern browsers including Chrome, Firefox, Safari, and IE 9 and up.
+TwentyTwenty is tested the latest versions of Chrome, Safari, FireFox, and iOS, and on IE 9 and above.
 
 = Can I customize how the slider looks? =
 Not yet, but I hope to enable that in a future release?
+
+= Will this work on any WordPress theme? =
+It should, but please report any issues on [this blog post](http://aspiringwebdev.com/twentytwenty) or by leaving a review.
 
 == Screenshots ==
 
