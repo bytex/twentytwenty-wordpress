@@ -5,7 +5,7 @@
  * @package   TwentyTwenty
  * @author    Corey Martin <coreym@gmail.com>
  * @license   GPL-2.0+
- * @link      http://wordpress.org/plugins
+ * @link      http://aspiringwebdev.com/gorgeous-before-and-after-pictures-in-wordpress/
  * @copyright 2013 Corey Martin
  */
 
@@ -254,6 +254,7 @@ class TwentyTwenty {
 	 */
 	public function enqueue_styles() {
 		wp_register_style( $this->plugin_slug . '-twentytwenty', plugins_url( 'assets/css/twentytwenty.css', __FILE__ ), array(), self::VERSION );
+		wp_register_style( $this->plugin_slug . '-twentytwenty-dark', plugins_url( 'assets/css/twentytwenty-dark.css', __FILE__ ), array(), self::VERSION );
 	}
 
 	/**
@@ -269,11 +270,20 @@ class TwentyTwenty {
 	}
 
 	public function twentytwenty_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+		'style' => ''
+		), $atts ) );
+
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('twentytwenty-jquery-event-move');
 		wp_enqueue_script('twentytwenty-twentytwenty');
 		wp_enqueue_script('twentytwenty-plugin-script');
-		wp_enqueue_style('twentytwenty-twentytwenty');
+
+		if ($style == 'dark') {
+			wp_enqueue_style('twentytwenty-twentytwenty-dark');
+		} else {
+			wp_enqueue_style('twentytwenty-twentytwenty');
+		}
 
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/smart-dom-document.php' );
 		$doc = new SmartDOMDocument();
