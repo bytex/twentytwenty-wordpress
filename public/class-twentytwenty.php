@@ -271,18 +271,47 @@ class TwentyTwenty {
 
 	public function twentytwenty_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-		'style' => ''
+		'color' => '',
 		), $atts ) );
 
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('twentytwenty-jquery-event-move');
 		wp_enqueue_script('twentytwenty-twentytwenty');
 		wp_enqueue_script('twentytwenty-plugin-script');
+		wp_enqueue_style('twentytwenty-twentytwenty');
 
-		if ($style == 'dark') {
-			wp_enqueue_style('twentytwenty-twentytwenty-dark');
+		if ($color) {
+			$color_css = <<<END
+			.twentytwenty-handle {
+				border: 3px solid $color;
+			}
+			.twentytwenty-horizontal .twentytwenty-handle:before {
+				webkit-box-shadow: 0 3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+				-moz-box-shadow: 0 3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+				box-shadow: 0 3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+			}
+
+			.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after {
+				background: $color;
+			}
+
+			.twentytwenty-horizontal .twentytwenty-handle:after {
+				-webkit-box-shadow: 0 -3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+				-moz-box-shadow: 0 -3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+				box-shadow: 0 -3px 0 $color, 0px 0px 12px rgba(51, 51, 51, 0.5);
+			}
+
+			.twentytwenty-right-arrow {
+				border-left: 6px solid $color;
+			}
+
+			.twentytwenty-left-arrow {
+				border-right: 6px solid $color;
+			}
+END;
+		wp_add_inline_style('twentytwenty-twentytwenty', $color_css);
 		} else {
-			wp_enqueue_style('twentytwenty-twentytwenty');
+			$style = '';
 		}
 
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/smart-dom-document.php' );
