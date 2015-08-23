@@ -269,10 +269,12 @@ class TwentyTwenty {
 		wp_register_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), self::VERSION );
 	}
 
-	public function twentytwenty_shortcode( $atts, $content = null ) {
+	public function twentytwenty_shortcode( $atts, $content = "" ) {
 		extract( shortcode_atts( array(
 		'style' => ''
 		), $atts ) );
+
+		$content = do_shortcode($content);
 
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('twentytwenty-jquery-event-move');
