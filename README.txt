@@ -36,8 +36,6 @@ Find out more about TwentyTwenty, and see examples, on the [official TwentyTwent
 
 3. Before the first image, type `[twentytwenty]`. After the second image, type `[/twentytwenty]`. See the second screenshot for an example.
 
-4. You can customize the color of the slider if you'd like. For instance, `[twentytwenty color=#000000]` will make the color black instead of white. If you don't customize, the slider will be white.
-
 [Watch this screencast](http://aspiringwebdev.com/gorgeous-before-and-after-pictures-in-wordpress/) to see the plugin in action and learn how to use it.
 
 == Frequently Asked Questions ==
@@ -49,10 +47,10 @@ Make sure that the pictures are the exact same height and width, and that you ch
 TwentyTwenty is tested the latest versions of Chrome, Safari, FireFox, and iOS, and on IE 9 and above.
 
 = Can I customize how the slider looks? =
-You can change the slider's color. Instead of `[twentytwenty]` say `[twentytwenty color=#000000]` to make the slider black, for instance. You can use any hex color. If you don't specify a color, the slider will be white.
+Not yet, but I hope to enable that in a future release?
 
 = Will this work on any WordPress theme? =
-It should, but please report any issues on the support forum to the right.
+It should, but please report any issues on [this blog post](http://aspiringwebdev.com/gorgeous-before-and-after-pictures-in-wordpress/) or the support forum to the right.
 
 == Screenshots ==
 
@@ -60,10 +58,6 @@ It should, but please report any issues on the support forum to the right.
 2. TwentyTwenty shortcodes in the WordPress editor. Images courtesy Abbie Rowe / National Archives.
 
 == Changelog ==
-
-= 1.1 =
-* Customize the slider's color
-* WordPress 3.9 tested
 
 = 1.0 =
 * Initial version
