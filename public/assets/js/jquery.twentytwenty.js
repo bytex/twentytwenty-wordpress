@@ -1,13 +1,11 @@
 (function($){
 
   $.fn.twentytwenty = function(options) {
-    var options = $.extend({default_offset_pct: 0.5, orientation: 'horizontal'}, options);
+    var options = $.extend({default_offset_pct: 0.5, orientation: 'horizontal', before_label: 'Before', after_label: 'After'}, options);
     return this.each(function() {
-
 
       var sliderPct = options.default_offset_pct;
       var container = $(this);
-      container.show();
       var sliderOrientation = options.orientation;
       var beforeDirection = (sliderOrientation === 'vertical') ? 'down' : 'left';
       var afterDirection = (sliderOrientation === 'vertical') ? 'up' : 'right';
@@ -22,13 +20,12 @@
       slider.append("<span class='twentytwenty-" + beforeDirection + "-arrow'></span>");
       slider.append("<span class='twentytwenty-" + afterDirection + "-arrow'></span>");
       container.addClass("twentytwenty-container");
-
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
-      
+
       var overlay = container.find(".twentytwenty-overlay");
-      overlay.append("<div class='twentytwenty-before-label'></div>");
-      overlay.append("<div class='twentytwenty-after-label'></div>");
+      overlay.append("<div class='twentytwenty-before-label' data-content='"+options.before_label+"'></div>");
+      overlay.append("<div class='twentytwenty-after-label' data-content='"+options.after_label+"'></div>");
 
       var calcOffset = function(dimensionPct) {
         var w = beforeImg.width();
@@ -62,7 +59,9 @@
       });
 
       var offsetX = 0;
+      var offsetY = 0;
       var imgWidth = 0;
+      var imgHeight = 0;
       
       slider.on("movestart", function(e) {
         if (((e.distX > e.distY && e.distX < -e.distY) || (e.distX < e.distY && e.distX > -e.distY)) && sliderOrientation !== 'vertical') {

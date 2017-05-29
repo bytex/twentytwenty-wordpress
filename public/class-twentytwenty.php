@@ -304,10 +304,10 @@ class TwentyTwenty {
 			$images_code = $images_code . '<img src="' . $image->getAttribute("src") . '"/>';
 		}
 		if ($width != '') {
-			$width = $width . 'px';
+			$width = intval($width) . 'px';
 		}
 		if ($height != '') {
-			$height = $height . 'px';
+			$height = intval($height) . 'px';
 		}
 		return '<div class="twentytwenty" class="twentytwenty-container" style="display: none; max-width: 100%; width: ' . $width . '; height: ' . $height . '">' . $images_code . '</div>';
 	}

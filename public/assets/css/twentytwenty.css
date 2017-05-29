@@ -75,16 +75,16 @@
   margin-left: -6px; }
 
 .twentytwenty-container {
-  max-width: 100%;
-  z-index: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  z-index: 0;
   overflow: hidden;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none; }
   .twentytwenty-container img {
+    max-width: 100%;
     position: absolute;
     top: 0;
     display: block; }
